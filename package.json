@@ -1,0 +1,21 @@
+{
+  "name": "content-management-service-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjbci/content-management-service-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjbci/content-management-service-homework/issues"
+  },
+  "homepage": "https://github.com/bjbci/content-management-service-homework#readme"
+}
