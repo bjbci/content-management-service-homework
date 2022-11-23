@@ -1,6 +1,7 @@
 {
   "name": "content-management-service-homework",
   "version": "1.0.0",
+  "type":"module",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/bjbci/content-management-service-homework/issues"
   },
-  "homepage": "https://github.com/bjbci/content-management-service-homework#readme"
+  "homepage": "https://github.com/bjbci/content-management-service-homework#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
 }
