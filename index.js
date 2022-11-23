@@ -65,19 +65,19 @@
         type: "list" ,
         message:"What would you like to do?"  ,
         name:   "intro",
-        choices:[" Add Department",  "Add Role",  "Add Employee",  "Update Employee Role "]
+        choices:["View All Departments","View All Roles","Add Department","Add Role", "Add Employee",  "Update Employee Role","Quit"]
     },
     {
         type: "list" ,
         message:"What Is Your Department?   " ,
         name:  "what_department" ,
-        choices:[" Sales", "Engineering",  "Accounts Legal"]
+        choices:[" Sales", "Engineering", "Accounts","Legal"]
     },
     {
         type: "list" ,
         message: "What Is The Name Of The Role?  "  ,
         name:   "role_name",
-        choices: ["Salesperson", "Lead-Engineer", "Software-Engineer", "Account-Manager","Accountant",  "Legal-Team-Lead", "Lawyer"]
+        choices: ["Sales-Lead","Salesperson", "Lead-Engineer", "Software-Engineer", "Account-Manager","Accountant",  "Legal-Team-Lead", "Lawyer"]
     },
     {
         type: "list" ,
