@@ -59,76 +59,117 @@
     import generateHTML from './generateHTML.js' //relative path needed for self made modules!
     //console.log(generateHTML)
     import fs from "fs"  //probably dont need this for this assignment
-     inquirer.prompt([
+     import mysql from 'mysql2'
 
-    {
-        type: "list" ,
-        message:"What would you like to do?"  ,
-        name:   "intro",
-        choices:["View All Departments","View All Roles","Add Department","Add Role", "Add Employee",  "Update Employee Role","Quit"]
-    },
-    {
-        type: "list" ,
-        message:"What Is Your Department?   " ,
-        name:  "what_department" ,
-        choices:[" Sales", "Engineering", "Accounts","Legal"]
-    },
-    {
-        type: "list" ,
-        message: "What Is The Name Of The Role?  "  ,
-        name:   "role_name",
-        choices: ["Sales-Lead","Salesperson", "Lead-Engineer", "Software-Engineer", "Account-Manager","Accountant",  "Legal-Team-Lead", "Lawyer"]
-    },
-    {
-        type: "list" ,
-        message: "What Department Does This Role Belong To?  ",
-        name:  "department_belong" ,
-        choices: [" Sales",  "Engineering",  "Accounts", "Legal"]
-    },
-    {
-        type: "input" ,
-        message: "What Is The Salary Of The Role?  "  ,
-        name:  "salary"
-    },
-    {
-        type: "input" ,
-        message:  "What Is The Employees First Name?  " ,
-        name:  "first_name"
-    },
-    {
-        type: "input" ,
-        message: "What Is The Employees Last Name?  "  ,
-        name:  "last_name" 
-    },
-    {
-        type: "list" ,
-        message:"What Is The Employees Role?   "   ,
-        name:   "employee_role",
-        choices:["Salesperson", "Lead-Engineer", "Software-Engineer", "Account-Manager", "Accountant",  "Legal-Team-Lead", "Lawyer"]
-    },
-    {
-        type: "input" ,
-        message: "Who Is The Employees Manager?  "  ,
-        name: "employee_manager"
-    }
-    // {
-    //     type:  ,
-    //     message: "   "  ,
-    //     name:   
-    // }
-  ])
-    .then(answers =>{
-        console.log(answers)
-        //generateHTML string
-        const html=generateHTML(answers) //the big html string will be save in the const html
-        console.log(html)
-        //save the file---PROBABLY DONT NEEED THIS FOR THIS ASSIGNMENT
-        fs.writeFile('./content-management-system.html',html,error=>{
-            if(error) throw error
+const connection = mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'BlueSky',
+    database:'cms_db'
+});
+//console.log(connection)
 
-            console.log('html saved')
-        })
-    })
-    .catch(error => console.log(error))
+// connection.query("select * from department;",function(error,results){
+//     if(error){
+//         throw new Error(error)
+//     }
+//     console.log(results)
+// })
+
+
+// connection.query("select * from roles;",function(error,results){
+//     if(error){
+//         throw new Error(error)
+//     }
+//     console.log(results)
+// })
+
+// connection.query("select * from employee;",function(error,results){
+//     if(error){
+//         throw new Error(error)
+//     }
+//     console.log(results)
+// })
+
+
+// connection.query("update employee from roles;",function(error,results){
+//     if(error){
+//         throw new Error(error)
+//     }
+//     console.log(results)
+// })
+
+
+//      inquirer.prompt([
+
+//     {
+//         type: "list" ,
+//         message:"What would you like to do?"  ,
+//         name:   "intro",
+//         choices:["View All Departments","View All Roles","Add Department","Add Role", "Add Employee",  "Update Employee Role","Quit"]
+//     },
+//     {
+//         type: "list" ,
+//         message:"What Is Your Department?   " ,
+//         name:  "what_department" ,
+//         choices:[" Sales", "Engineering", "Accounts","Legal"]
+//     },
+//     {
+//         type: "list" ,
+//         message: "What Is The Name Of The Role?  "  ,
+//         name:   "role_name",
+//         choices: ["Sales-Lead","Salesperson", "Lead-Engineer", "Software-Engineer", "Account-Manager","Accountant",  "Legal-Team-Lead", "Lawyer"]
+//     },
+//     {
+//         type: "list" ,
+//         message: "What Department Does This Role Belong To?  ",
+//         name:  "department_belong" ,
+//         choices: [" Sales",  "Engineering",  "Accounts", "Legal"]
+//     },
+//     {
+//         type: "input" ,
+//         message: "What Is The Salary Of The Role?  "  ,
+//         name:  "salary"
+//     },
+//     {
+//         type: "input" ,
+//         message:  "What Is The Employees First Name?  " ,
+//         name:  "first_name"
+//     },
+//     {
+//         type: "input" ,
+//         message: "What Is The Employees Last Name?  "  ,
+//         name:  "last_name" 
+//     },
+//     {
+//         type: "list" ,
+//         message:"What Is The Employees Role?   "   ,
+//         name:   "employee_role",
+//         choices:["Salesperson", "Lead-Engineer", "Software-Engineer", "Account-Manager", "Accountant",  "Legal-Team-Lead", "Lawyer"]
+//     },
+//     {
+//         type: "input" ,
+//         message: "Who Is The Employees Manager?  "  ,
+//         name: "employee_manager"
+//     }
+//     // {
+//     //     type:  ,
+//     //     message: "   "  ,
+//     //     name:   
+//     // }
+//   ])
+//     .then(answers =>{
+//         console.log(answers)
+//         //generateHTML string
+//         const html=generateHTML(answers) //the big html string will be save in the const html
+//         console.log(html)
+//         //save the file---PROBABLY DONT NEEED THIS FOR THIS ASSIGNMENT
+//         fs.writeFile('./content-management-system.html',html,error=>{
+//             if(error) throw error
+
+//             console.log('html saved')
+//         })
+//     })
+//     .catch(error => console.log(error))
 
   

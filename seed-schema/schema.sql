@@ -1,11 +1,11 @@
 DROP DATABASE IF EXISTS CMS_db;
 CREATE DATABASE CMS_db;
-
 USE CMS_db;
 
 
 CREATE TABLE DEPARTMENT(
     ID int NOT NULL AUTO_INCREMENT,
+    Department_Id int NOT NULL,
     Name varchar(40) NOT NULL,
     PRIMARY KEY(ID)
 
@@ -15,6 +15,7 @@ CREATE TABLE ROLES(
     ID int NOT NULL AUTO_INCREMENT,
     Title varchar(40) NOT NULL,
     Salary int NOT NULL,
+    Name varchar(40) NOT NULL,
     Department_Id int NOT NULL,
      PRIMARY KEY(ID)
 );
@@ -24,7 +25,11 @@ CREATE TABLE EMPLOYEE(
     First_name varchar(20) NOT NULL,
     Last_name varchar(20)NOT NULL ,
     Role_Id int NOT NULL,
+    Title varchar(40) NOT NULL,
+    Name varchar(40) NOT NULL,
+    Salary int NOT NULL,
     Manager_Id int NOT NULL,
      PRIMARY KEY(ID)
 );
 
+title,salary,name,

@@ -2,77 +2,77 @@
 -- VALUES (value1, value2,value3,.....);
 
 
-INSERT INTO department(Name)
-VALUES ("sales");
+INSERT INTO department(Name,department_Id)
+VALUES ("sales",,10);
 
-INSERT INTO department(Name)
-VALUES ("sales");
+INSERT INTO department(Name,department_Id)
+VALUES ("sales",10);
 
-INSERT INTO  department(Name)
-VALUES ("engineering");
+INSERT INTO  department(Name,department_Id)
+VALUES ("engineering",20);
 
-INSERT INTO  department(Name)
-VALUES ("engineering");
+INSERT INTO  department(Name,department_Id)
+VALUES ("engineering",20);
 
-INSERT INTO  department(Name)
-VALUES ("accounts");
+INSERT INTO  department(Name,department_Id)
+VALUES ("accounts",30);
 
-INSERT INTO  department(Name)
-VALUES ("accounts");
+INSERT INTO  department(Name,department_Id)
+VALUES ("accounts",30);
 
-INSERT INTO department(Name)
-VALUES ("legal");
+INSERT INTO department(Name,department_Id)
+VALUES ("legal",40);
 
-INSERT INTO department(Name)
-VALUES ("legal");
+INSERT INTO department(Name,department_Id)
+VALUES ("legal",40);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("sales_lead",80000.00,10);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("sales_lead",80000.00,"sales",10);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("salesperson",65000.00,10);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("salesperson",65000.00,"sales",10);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("lead_engineer",90000.00,20);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("lead_engineer",90000.00,"engineering",20);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("software_engineer", 80000.00,20);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("software_engineer", 80000.00,"engineering",20);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("account_manager", 90000.00,30);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("account_manager", 90000.00,"accounts",30);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("accountant", 80000.00,30);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("accountant", 80000.00,"accounts",30);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("legal_team_lead",150000.00,40);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("legal_team_lead",150000.00,"legal",40);
 
-INSERT INTO roles(title,salary,department_Id)
-VALUES ("lawyer",130000.00,40);
+INSERT INTO roles(title,salary,name,department_Id)
+VALUES ("lawyer",130000.00,"legal",40);
 
-INSERT INTO employee(first_name,last_name,role_id,manager_id)
-VALUES ("Elene","Ecru",1010,null);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Elene","Ecru","sales_lead",80000.00,"sales",1010,0);
 
-INSERT INTO employee(first_name,last_name,role_id,manager_id)
-VALUES("Lexi","Lavender",1020,1);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES("Lexi","Lavender","salesperson",65000.00,"sales",1020,1);
 
-INSERT INTO employee(ID,first_name,last_name,role_id,manager_id)
-VALUES (0003,"Rodger","Dodger",2010, null);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Rodger","Dodger","lead_engineer",90000.00,"engineering",2010, 0);
 
-INSERT INTO employee(ID,first_name,last_name,role_id,manager_id)
-VALUES (0004,"Peter", "Parker",2020, 3);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Peter", "Parker","software_engineer", 80000.00,"engineering",2020, 3);
 
-INSERT INTO employee(ID,first_name,last_name,role_id,manager_id)
-VALUES (0005,"Maximus", "Decidus",3010, null);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Maximus", "Decidus","account_manager", 90000.00,"accounts",3010, 0);
 
-INSERT INTO employeeID(ID,first_name,last_name,role_id,manager_id)
-VALUES (0006,"Ronald", "McDonald", 3020, 5);
+INSERT INTO employeeID(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Ronald", "McDonald","accountant", 80000.00,"accounts", 3020, 5);
 
-INSERT INTO employee(ID,first_name,last_name,role_id,manager_id)
-VALUES (0007,"Siobahn", "OLeary", 4010, null);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Siobahn", "OLeary","accountant", 80000.00,"accounts", 4010, 0);
 
-INSERT INTO employee(ID,first_name,last_name,role_id,manager_id)
-VALUES (0008,"Errol", "Flan",4020,7);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Errol", "Flan","legal_team_lead",150000.00,"legal",4020,7);
 
-INSERT INTO employee(ID,first_name,last_name,role_id,manager_id)
-VALUES (0009,"Fred","Larsen", 4020, 7);
+INSERT INTO employee(first_name,last_name,title,salary,name,role_id,manager_id)
+VALUES ("Fred","Larsen","lawyer",130000.00,"legal", 4020, 7);
